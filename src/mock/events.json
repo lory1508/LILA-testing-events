@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "_id": 1,
+      "user": 2,
+      "room": 2,
+      "status": "Colloquio in corso",
+      "number": 23
+    },
+    {
+      "_id": 2,
+      "user": 3,
+      "room": 3,
+      "status": "Libero",
+      "number": 26
+    },
+    {
+      "_id": 2,
+      "user": 4,
+      "room": 4,
+      "status": "Libero",
+      "number": 28
+    },
+    {
+      "_id": 2,
+      "user": 5,
+      "room": 5,
+      "status": "Colloquio in corso",
+      "number": 21
+    }
+  ]
+}

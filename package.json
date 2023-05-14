@@ -1,0 +1,34 @@
+{
+  "name": "testing-LILA",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "7.0.96",
+    "axios": "^1.3.5",
+    "dotenv": "^16.0.3",
+    "firebase": "^9.21.0",
+    "md5": "^2.3.0",
+    "roboto-fontface": "*",
+    "vue": "^3.2.38",
+    "vue-router": "4",
+    "vuetify": "^3.0.0",
+    "vuex": "^4.0.2",
+    "webfontloader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vicons/ionicons5": "^0.12.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "autoprefixer": "^10.4.13",
+    "naive-ui": "^2.34.3",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
+    "vfonts": "^0.0.3",
+    "vicons": "^0.0.1",
+    "vite": "^3.1.9",
+    "vite-plugin-vuetify": "^1.0.0-alpha.12"
+  }
+}

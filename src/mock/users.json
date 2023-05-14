@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "_id": 1,
+      "name": "Giacomo",
+      "publicName": "Admin",
+      "email": "giacomo@gmail.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "_id": 2,
+      "name": "Luca",
+      "publicName": "Medico 1",
+      "email": "luca@gmail.com",
+      "password": "123456",
+      "role": "doctor"
+    },
+    {
+      "_id": 3,
+      "name": "Brunella",
+      "publicName": "Counselor 1",
+      "email": "brunella@gmail.com",
+      "password": "123456",
+      "role": "counselor"
+    },
+    {
+      "_id": 4,
+      "name": "Giovanni",
+      "publicName": "Medico 2",
+      "email": "giovanni@gmail.com",
+      "password": "123456",
+      "role": "doctor"
+    },
+    {
+      "_id": 5,
+      "name": "Giovanna",
+      "publicName": "Counselor 2",
+      "email": "giovanna@gmail.com",
+      "password":"123456",
+      "role": "counselor"
+    },
+    {
+      "_id": 6,
+      "name": "Giorgio",
+      "publicName": "Medico 3",
+      "email": "giorgio@gmail.com",
+      "password":"123456",
+      "role": "doctor"
+    }
+  ]
+}

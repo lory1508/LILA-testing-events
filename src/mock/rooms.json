@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "_id": 1,
+      "destination": "counseling",
+      "name": "405"
+    },{
+      "_id": 2,
+      "destination": "medico",
+      "name": "402"
+    },{
+      "_id": 3,
+      "destination": "counseling",
+      "name": "404"
+    },{
+      "_id": 4,
+      "destination": "medico",
+      "name": "408"
+    },{
+      "_id": 5,
+      "destination": "counseling",
+      "name": "409"
+    }
+  ]
+}
