@@ -6,13 +6,15 @@ const store = createStore({
 		user: JSON.parse(localStorage.getItem('user')) || {},
 		event: JSON.parse(localStorage.getItem('event')) || {},
 		roomId: localStorage.getItem('roomId') || '',
+		test: JSON.parse(localStorage.getItem('test')) || {},
 	},
 	getters: {
 		roomId: (state) => state.roomId,
-    user: (state) => {
-			return state.user;
-		},
-    event: (state) => state.event,
+		test: (state) => state.test,
+		user: (state) => {
+				return state.user;
+			},
+    	event: (state) => state.event,
 		isUserLogged: (state) => {
 			if(Object.keys(state.user).length){
 				return true;
@@ -49,17 +51,29 @@ const store = createStore({
 		}
 	},
 	mutations: {
+		setTest(state, test) {
+			state.test = test;
+			localStorage.setItem('test', JSON.stringify(test));
+		},
+		clearTest(state) {
+			state.test = {};
+			localStorage.removeItem('test');
+		},
 		setRoomId(state, roomId) {
 			state.roomId = roomId;
 			localStorage.setItem('roomId', roomId);
 		},
+		clearRoomId(state) {
+			state.roomId = '';
+			localStorage.removeItem('roomId');
+		},
 		setUser(state, user) {
 			state.user = user;
-      localStorage.setItem('user', JSON.stringify(user));
+      		localStorage.setItem('user', JSON.stringify(user));
 		},
 		clearUser(state) {
 			state.user = {};
-      localStorage.removeItem('user');
+      		localStorage.removeItem('user');
 		},
 		setEvent(state, event) {
 			state.event = event;
@@ -67,7 +81,7 @@ const store = createStore({
 		},
 		clearEvent(state) {
 			state.event = {};
-      localStorage.removeItem('event');
+      		localStorage.removeItem('event');
 		},
 	}
 });

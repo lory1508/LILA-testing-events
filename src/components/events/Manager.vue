@@ -13,7 +13,7 @@
             <n-form-item first label="Data" prop="date" required="">
                 <n-date-picker
                     v-model:formatted-value="formattedDate"
-                    value-format="dd-MM-yyyy HH:mm"
+                    value-format="yyyy-MM-dd HH:mm"
                     type="datetime"
                     clearable
                 />

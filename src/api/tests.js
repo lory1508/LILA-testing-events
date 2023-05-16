@@ -31,9 +31,10 @@ export const deleteTest = async (id) => {
   return {status:200};
 }
 
-const getSortedTests = async (eventId, order="desc", status="waitingForCounseling") => {
+export const getSortedTests = async (eventId, order="desc", status=null) => {
   let q = null
-  if(status === "waitingForCounseling")
+  console.log(eventId, order, status);
+  if(status === null || status === "waitingForCounseling")
     q = query(collection(db, "tests"), where("eventId", "==", eventId), orderBy("createdAt", order));
   else
     q = query(collection(db, "tests"), where("eventId", "==", eventId), orderBy("updatedAt", order));
@@ -46,7 +47,7 @@ const getSortedTests = async (eventId, order="desc", status="waitingForCounselin
       ...doc.data()
     })
   });
-  
+
   return tests;
 }
 

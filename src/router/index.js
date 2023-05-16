@@ -10,6 +10,7 @@ import CounselorsView from '@/views/CounselorsView.vue';
 import EventsManagement from '@/views/admin/EventsManagement.vue';
 import UsersManagement from '@/views/admin/UsersManagement.vue';
 import Forbidden from '@/views/ForbiddenView.vue';
+import WaitingBoard from '@/views/WaitingBoard.vue';
 // import NotFound from '@/pages/NotFound.vue'
 
 const routes = [
@@ -23,62 +24,70 @@ const routes = [
 		alias: '/dashboard',
 		name: 'Dashboard', 
 		component: TheDashboardVue,
-    meta: {
-      requiresAuth: true,
-    }
+		meta: {
+		requiresAuth: true,
+		}
 	},
 	{	
 		path: '/medici', 
 		name: 'Doctor', 
 		component: DoctorView,
-    meta: {
-      requiresAuth: true,
+		meta: {
+			requiresAuth: true,
 			requiresDoctor: true
-    }
+    	}
 	},
 	{	
 		path: '/doctor/test', 
 		name: 'CallingTest', 
 		component: CallingTest,
-    meta: {
-      requiresAuth: true,
+		meta: {
+			requiresAuth: true,
 			requiresDoctor: true
-    }
+    	}
 	},
 	{
 		path: '/counselors',
 		name: 'Counselors',
 		component: CounselorsView,
-    meta: {
-      requiresAuth: true,
+		meta: {
+			requiresAuth: true,
 			requiresCounselor: true
-    }
+    	}
 	},
 	{
 		path: '/events',
 		name: 'Events',
 		component: EventsManagement,
-    meta: {
-      requiresAuth: true,
+    	meta: {
+      		requiresAuth: true,
 			requiresAdmin: true
-    }
+    	}
 	},
 	{
 		path: '/users',
 		name: 'Users',
 		component: UsersManagement,
-    meta: {
-      requiresAuth: true,
+    	meta: {
+      		requiresAuth: true,
 			requiresAdmin: true
-    }
+    	}
+	},
+	{
+		path: '/tabellone',
+		name: 'Tabellone',
+		component: WaitingBoard,
+		meta: {
+			requiresAuth: false,
+		}
 	},
 	{
 		path: '/forbidden',
 		name: 'Forbidden',
 		component: Forbidden,
-    meta: {
-      requiresAuth: true
-    }
+    	meta: {
+      		requiresAuth: true
+    	}
 	},
 	// { path: '/:pathMatch(.*)*', name: '404', component: NotFound },
 ];

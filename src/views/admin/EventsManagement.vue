@@ -164,6 +164,7 @@ const fetchEvents = async () => {
     loading.value = true;
     const es = await getEvents();
     events.value = es.map((e) => {
+      console.log( typeof e.date );
       return {
         ...e,
         formattedDate: new Date(e.date).toLocaleDateString(

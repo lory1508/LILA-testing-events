@@ -17,7 +17,7 @@
           />
         </div>
       </div>
-      <n-button :render-icon="renderIcon(LogoutIcon)" strong type="error" @click="logout">Logout</n-button>
+      <n-button v-if="!hideLogout" :render-icon="renderIcon(LogoutIcon)" strong type="error" @click="logout">Logout</n-button>
     </div>
     <div class="flex md:hidden p-4">
       <n-button v-if="!store.getters.isUserAdmin" :render-icon="renderIcon(LogoutIcon)" strong type="error" @click="logout">Logout</n-button>
@@ -52,7 +52,7 @@
 /***
  * imports
  */
-import { ref, h } from 'vue';
+import { ref, h, computed } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter, RouterLink } from 'vue-router';
 import { NIcon } from "naive-ui";
@@ -123,12 +123,18 @@ const menuOptions = [
 const active = ref(false);
 const placement = ref("left");
 
+const hideLogout = computed(() => {
+  return router.currentRoute.value.name === 'Login' || router.currentRoute.value.name === 'Tabellone';
+});
+
 /**
  * Methods
  */
 const logout = () => {
   store.commit('clearUser');
   store.commit('clearEvent');
+  store.commit('clearRoomId')
+  store.commit('clearTest')
   router.push('/login');
 };
 const activate = (place) => {
